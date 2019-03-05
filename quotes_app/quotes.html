@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                    "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Quotes App</title>
+  <script src="src/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="quotes.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <navbar-component v-bind:handlequotesearch="handlequotesearch"></navbar-component>
+    <main>
+      <div class="simple-flex">
+        <div id="filter-container">
+          <theme-filter-component v-bind:handleThemeChange="handlethemechange"></theme-filter-component>
+        </div>
+        <div id="quote-container">     
+          <div v-if="quotesLoaded" v-cloak>
+            <paginated-component v-bind:quotes="filterQuoteText"></paginated-component>
+          </div>   
+          <p v-else>Currently no quotes available to display.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="src/app.js" type="module"></script>
+</body>
+</html>

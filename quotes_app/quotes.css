@@ -1,0 +1,187 @@
+body {
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    color: #3f3f3f;
+    
+}
+
+#app {
+    width: 100%;
+}
+
+/* utility styles */
+/* ********************************************************* */
+.simple-flex {
+    display: flex;
+}
+
+
+/* navbar styles */
+/* ********************************************************* */
+header {
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: #0E788F;
+    overflow: auto;
+    align-items: baseline;
+    justify-content: space-between;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.19);
+    color: #F2FFFF;
+}
+
+#search-container {
+    flex-direction: column;
+}
+
+#search-container label {
+    font-size: .75em;
+}
+
+#header input {
+    width: 400px;
+}
+
+
+/* main content styles */
+/* ********************************************************* */
+
+main {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 1%;
+}
+
+/* theme filter styles */
+/* ********************************************************* */
+
+#filter-container {
+    flex-basis: 8%;
+}
+
+#filter-container h2 {
+    font-size: 1em;
+    padding: 0px;
+    margin: 0px;
+}
+
+.filter-element label {
+    font-size: .75em;
+}
+
+#theme-card {
+    border-radius: 3px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.19);
+    min-width: 150px;
+    margin-top: 5px;
+    color: #2e2e2e;
+}
+
+.theme-card-padding {
+    padding: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+/* quote card styles */
+/* ********************************************************* */
+
+#quote-container {
+    flex-basis: 92%;
+}
+
+#quote-container ul {
+    list-style-type: none;
+    margin: 0px;
+}
+
+#quote-container li {
+    margin: 5px 0;
+}
+
+#quote-list-wrapper {
+  min-height: 70vh;  
+}
+
+.quote-card {
+    border-radius: 3px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.19);
+    min-height: 100px;
+}
+
+.quote-card h3 {
+    font-size: .75em;
+    margin: 0;
+    padding: 0;
+}
+
+.quote-card p {
+    font-size: .75em;
+}
+
+#card-header {
+    /* default background-color for card-header if applyThemeColor method fails */
+    background-color: #b28900; 
+    color: #F2FFFF;
+    padding: .5em 1em;
+}
+
+#context-source {
+    padding-left: 2%;
+    width: 100%;
+}
+
+#card-body {
+    padding: 0 1em;
+}
+
+.slide-fade-enter-active {
+    transition: all 1s ease;
+}
+
+.slide-fade-leave-active {
+    transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.slide-fade-enter, .slide-fade-leave-to {
+    transform: translateY(10px);
+    opacity: 0;
+}
+
+/* pagination styles */
+/* ********************************************************* */
+
+#pagination-buttons {
+    padding-left: 40px;
+    min-height: 100px;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.button:hover {
+    border-color: #b28900;
+  }
+
+.button:disabled {
+    background-color: rgb(215, 215, 215);
+    border-color: rgb(216, 216, 216);
+    cursor: default;
+}
+
+#next-btn {
+    margin-left: .75em;
+}
+
+/* vue.js styles */
+/* ************************************************************** */
+
+[v-cloak] > * { 
+    display: none; 
+}
+
+[v-cloak]::before { 
+    content: "loading..."; 
+}
