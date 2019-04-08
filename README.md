@@ -1,4 +1,4 @@
-# vue-exercise
+# quotes
 [View Demo video for quote app: https://vimeo.com/329216467](https://vimeo.com/329216467)
 
 ![Watch the video](quote_app_01.png)
